@@ -22,8 +22,6 @@ class Artist
 	end
 
 	def genres
-		genre_arr = []
-		songs.each {|song| genre_arr << song.genre}
-		genre_arr
+		songs.map {|song| song.genre}
 	end
 end
