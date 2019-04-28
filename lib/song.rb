@@ -15,14 +15,12 @@ attr_accessor :name, :artist, :genre
 
   def genre
     Genre.all.each do |genre|
-      if genre.song == self
-        @artist = genre.artists
+      if genre.songs == self
+        genre.artists = @artist
       end
     end
   end
 
-  def artist
-  end
 
 
 end
