@@ -19,5 +19,12 @@ class Artist
     self.songs << new_song
   end
 
+def genre
+  Song.all.each do |song|
+    if song.artist == self
+      song.genre
+    end
+  end
+end
 
 end
